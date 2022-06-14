@@ -1,0 +1,903 @@
+/* Color: Grey */
+html, body {
+	background: #ffffff;
+	color: #333333;
+	padding: 0;
+	margin: 0!important;
+}
+body a,
+body a:hover {
+	color: #c1c1c1;
+	text-decoration: none;
+}
+
+.InfoMessage,
+.SpecificInfoMessage,
+.SuccessMessage,
+.ErrorMessage {
+	padding: 10px!important;
+	margin: 15px!important;
+	background-image: none!important;
+}
+.InfoMessage {
+	border: 1px solid orange!important;
+	background: #fff1a8!important;
+}
+.SpecificInfoMessage {
+	border: 1px solid #f8e4d1!important;
+	background: #fff1a8!important;
+}
+.SuccessMessage {
+	background: #E8FFDF!important;
+	border: 1px solid green!important;
+}
+.ErrorMessage {
+	background: #fdeeee!important;
+	border: 1px solid #fc7f7f!important;
+}
+
+/* Shipping Estimation on Cart Contents Page */
+.EstimateShipping {
+	border: 1px solid #d6d9de;
+	background: #edf2f3;
+}
+
+/* Express Checkout */
+.ExpressCheckoutBlock .ExpressCheckoutTitle,
+.ExpressCheckoutBlockCollapsed .ExpressCheckoutTitle {
+	color: #999999;
+	font-weight: normal;
+	text-transform: uppercase;
+	background: #fafafa;
+	border: none;
+	border-top: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	padding: 0;
+}
+.ExpressCheckoutBlockCollapsed .ExpressCheckoutTitle .ChangeLink{
+	background-image: url(../images/classic/icon_checkout_show.png);
+}
+.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+	color: #a3a3a3;
+}
+#CheckoutGuestForm .PL40{
+	padding-left: 0;
+}
+
+/* General Tables */
+table.General tbody tr td {
+	border-top: 1px solid #efefef;
+}
+
+/* Product Videos */
+.currentVideo {
+	background-color: #e2e5e6;
+}
+
+
+/* Classic CSS */
+.phoneIcon{
+	float: right;
+	padding: 18px 15px 8px 15px;
+	font: bold 12px/16px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.mainNavi{
+	clear: both;
+	display: block;
+	background: #fafafa;
+	margin-top: 28px;
+}
+.showMenu{
+	float: left;
+	width: 55px;
+	height: 40px;
+	text-indent: 60px;
+	overflow: hidden;
+	cursor: pointer;
+	background: #333333 url(../images/classic/icon_menu.png) no-repeat center center;
+}
+#SearchForm{
+	float: left;
+	width: 155px;
+}
+.mainNavi .Cart{
+	float: right;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 10px 5px;
+	line-height: 20px;
+	background: #efefef;
+}
+.mainNavi .Cart span{
+	float: left;
+	min-width: 30px;
+	max-width: 57px;
+	text-align: center;
+	padding: 0 3px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.mainNavi .Cart a{
+	float: right;
+	width: 22px;
+	height: 18px;
+	display: inline;
+	margin: 0 10px 0 5px;
+	background: url(../images/classic/icon_cart_black.png) no-repeat center center;
+}
+.topNav{
+	display: block;
+	display: none;
+	clear: both;
+	text-align: left;
+	background: #fafafa;
+}
+.topNav ul,
+.topNav ul li{
+	float: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+}
+.topNav ul ul,
+.topNav h2,
+.topNav .sf-menu ul,
+.pn, #SideSubPageList h2{
+	display: none!important;
+}
+
+#TopMenu li a,
+#TopMenu li a:hover ,
+.topNav ul li a,
+.SubCategoryList li a,
+.Block.BrandList li a,
+.SubBrandList li a,
+.SubBrandListGrid li a,
+.SitemapCategories li a{
+	float: none;
+	text-align: left;
+	display: block;
+	color: #333333!important;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font: normal 11px/18px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.topNav .CategoryList li a,
+.SubCategoryList li a{
+	font-weight: bold;
+	font-size: 14px;
+	padding: 10px 15px;
+	border-bottom: 1px solid #efefef;
+	background: #ffffff url(../images/classic/icon_nav_arrow.png) no-repeat right center;
+}
+.SubCategoryList li a{
+	font-weight: normal;
+	font-size: 12px;
+}
+.SitemapCategories li li a,
+.SubCategoryList li a:before{	
+    content: "- ";
+}
+.sf-vertical, .sf-vertical li {
+	width: inherit;
+}
+.topNav #Menu,
+#TopMenu{
+	padding: 10px 0;
+	border-bottom: 1px solid #efefef;
+}
+#cart-amount{
+	display: none!important;
+}
+
+
+.QuickSearch {
+	top: 0!important;
+	left: 0!important;
+	width: 100%!important;
+	border: none!important;
+	margin: 130px 0 0 0!important;
+	padding: 15px 0!important;
+	background: #fafafa;
+	text-align: left;
+	font-size: 11px;
+	-webkit-box-shadow: 0 10px 6px -6px #efefef;
+   -moz-box-shadow: 0 10px 6px -6px #efefef;
+        box-shadow: 0 10px 6px -6px #efefef;
+}
+.QuickSearch:before, .QuickSearchResultImage,
+.QuickSearchResult .Price,
+.QuickSearchResult .RatingIMG {
+	display: none;
+}
+td.QuickSearchResultMeta {
+	padding-right: 0!important;
+}
+.QuickSearchHover td {
+	background: none!important;
+}
+.QuickSearch a{
+	display: block;
+	padding: 5px 15px;
+	color: #333333;
+}
+.QuickSearchAllResults{
+	text-transform: uppercase;
+}
+.QuickSearchAllResults a {
+	background: #333333!important;
+	margin: 0 auto;
+}
+
+.home #Wrapper{
+	padding: 0;
+}
+.home .slide-show,
+.product-slide .slide-show {
+	width: 100%;
+	display: block;
+	border: none;
+	position: relative;
+	border-bottom: 1px solid #efefef;
+	min-height: 100px;
+	height: auto;
+}
+.product-slide .slide-show {
+	width: auto;
+	border: none;
+	padding: 10px 0 45px 0;
+}
+.product-slide .flex-control-nav{
+	bottom: 15px;
+}
+.flex-direction-nav,
+.slide-content .slide-overlay{
+	display: none!important;
+}
+.slide-show-render-full .slide-content {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.slide-show-render .slides li,
+.slide-show-render .slides {
+	height: auto;
+	text-align: center;
+	border-bottom: none;
+}
+.slide-show-render.slide-show .flex-control-nav.flex-control-paging {
+	z-index: 99;
+}
+.slide-show-render.slide-show .flex-control-nav.flex-control-paging li a,
+.product-slide .slide-show .flex-control-nav.flex-control-paging li a {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #dbdbdb;
+	background-color: #cccccc;
+}
+.slide-show-render.slide-show .flex-control-nav.flex-control-paging li a.flex-active,
+.product-slide .slide-show .flex-control-nav.flex-control-paging li a.flex-active {
+	background-color: #ffffff;
+}
+.home .slide-show .slide a,
+.home .slide-show .slide .slide-image-wrapper,
+.product-slide .slide-show ul li{
+	float: left;
+	display: block;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.home .slide-show .slide .slide-image-wrapper img,
+.product-slide .slide-show .slides img{
+	display: inline;
+	max-width: 100%;
+	width: auto;
+	float: none;
+}
+#HomeFeaturedProducts .product-slide .Rating {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+#HomeFeaturedProducts .flex-control-nav{
+	width: auto;
+	left: 8px;
+	bottom: 10px;
+}
+
+.NewProducts{
+	padding: 10px 15px;
+	margin: 0;
+}
+#SideNewProducts h2{
+	padding: 12px 0;
+	border: none;
+}
+#SideNewProducts img,
+.Content .Block .ProductList li .ProductImage,
+.Content .Block .ProductList li:hover .ProductImage {
+	border: none!important;
+	background: none!important;
+}
+.Content .Block .ProductList li.Even,
+.Content .Block .ProductList li:nth-child(even),
+.Right .Block .ProductList li.Even,
+.Right .Block .ProductList li:nth-child(even){
+	float: right;
+}
+.Content .Block .ProductList li:nth-child(odd),
+.Content .Block .ProductList li.Odd{
+	clear: both;
+}
+.Content .Block .ProductList .ProductImage img {
+	max-width: 100% !important;
+	max-height: 100% !important;
+}
+.Content .Block .ProductList .ProductActionAdd,
+#CategoryHeading h2{
+	display: none;
+}
+
+.Block h2, .PageHeader,
+.SitemapCategories h3,
+#CategoryBreadcrumb ul li{
+	color: #333333;
+	font-size: 14px;
+	text-align: left;
+	padding: 15px;
+	border-bottom: 1px solid #efefef;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+#CategoryBreadcrumb{
+	display: block;
+	clear: both;
+	padding: 0 15px;
+	border-bottom: 1px solid #efefef;
+}
+#CategoryBreadcrumb ul{
+	margin: 0;
+}
+#CategoryBreadcrumb ul li{
+	float: left;
+	font-weight: bold;
+	border-bottom: none;
+	padding: 12px 0;
+	margin-right: 10px;
+}
+#CategoryBreadcrumb ul li a{
+	font-size: 14px;
+	font-weight: bold;
+	padding-right: 18px;
+	color: #333333;
+}
+.AccountOrder h3{
+	padding: 15px;
+	border-bottom: 1px solid #efefef;
+}
+#SideAccountMenu h2,
+#SimilarMultiProductsByCustomerViews h2{
+	background: -moz-linear-gradient(top,  rgba(243,243,243,1) 0%, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0) 20%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,243,243,1)), color-stop(25%,rgba(255,255,255,0.05)), color-stop(20%,rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(top,  rgba(243,243,243,1) 0%,rgba(255,255,255,0.05) 25%,rgba(255,255,255,0) 20%);
+	background: -o-linear-gradient(top,  rgba(243,243,243,1) 0%,rgba(255,255,255,0.05) 25%,rgba(255,255,255,0) 20%);
+	background: -ms-linear-gradient(top,  rgba(243,243,243,1) 0%,rgba(255,255,255,0.05) 25%,rgba(255,255,255,0) 20%);
+	background: linear-gradient(to bottom,  rgba(243,243,243,1) 0%,rgba(255,255,255,0.05) 25%,rgba(255,255,255,0) 20%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#00ffffff',GradientType=0 );
+}
+#SimilarMultiProductsByCustomerViews h2{
+	border-bottom: none;
+	margin-top: 10px;
+}
+.AccountOrder h3{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.SideRelatedProducts h2{
+	padding: 15px;
+	border-top: 1px solid #efefef;
+}
+.SubCategoryList h3,
+.ExpressCheckout h2,
+#wishlistsform br{
+	display: none;
+}
+.CategoryContent{
+	clear: both;
+	display: block;
+	padding: 0 15px;
+}
+.CategoryPagination a{
+	display: inline;
+	color: #999999;
+	padding: 0!important;
+}
+.CategoryPagination .ActivePage a,
+.CategoryPagination a:hover{
+	color: #333333;
+	text-decoration: none;
+}
+
+.RelatedSearches,
+#SearchPage .ProductList,
+#SuggestiveCartContent .ProductList,
+#AccountNewReturnProducts h3{
+	display: block;
+	clear: both;
+	padding: 0 15px;
+}
+#AccountRecentItems .ProductList,
+#AccountOrderLinks .BlockContent,
+#AccountNewReturnInfo,
+#CreateAccountForm .BlockContent,
+#PurchaseGiftCertificate .BlockContent,
+#SearchPageHeader .BlockContent,
+#SearchPageHeader .SearchSuggest,
+#ShippingAddressForm .BlockContent, 
+#ChooseShippingAddress .BlockContent, 
+#ChooseShippingProvider .BlockContent,
+#ChooseBillingAddress .BlockContent{
+	display: block;
+	clear: both;
+	padding: 15px;
+}
+#SearchPageHeader .BlockContent{
+	padding-top: 0px;
+}
+#AccountNewReturnProducts h3,
+#AccountNewReturnInfo h3,
+#SuggestiveCartContent{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.RelatedSearches{
+	font-size: 11px;
+	text-align: left;
+	margin: 0;
+	padding-top: 10px;
+	background: none!important;
+}
+.RelatedSearches strong{
+	display: block;
+	font-weight: normal;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.RelatedSearches a{
+	display: block;
+	padding: 4px 0;
+	color: #333333;
+}
+
+#WishListItems p{
+	display: block;
+	clear: both;
+	margin: 0;
+	padding: 12px 15px 5px 15px;
+}
+#WishListItems .InfoMessage input[type="text"]{
+	border: none;
+	background: none;
+	padding: 10px 0;
+}
+.Content #WishListItems .ProductList li {
+	width: 100%!important;
+	position: relative;
+	display: block;
+	padding: 10px 0;
+	clear: both;
+	border-bottom: 1px solid #efefef;
+}
+#WishListItems .ProductDetails{
+	float: right;
+	width: 200px;
+	clear: none;
+	padding: 3px 15px 10px 0!important;
+}
+.Content #WishListItems .ProductList li .ProductImage{
+	float: left;
+	height: auto!important;
+	width: 80px!important;
+	margin: 0 0 3px 15px;
+}
+#WishListEditFrom dd input{
+	margin-left: 0;
+}
+.Content .RemoveFromWishlistForm input[type="submit"],
+.Content .CartList a.CartRemoveLink{
+	float: right;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	height: 16px;
+	line-height: 16px;
+	cursor: pointer;
+	color: #c1c1c1!important;
+	font-size: 11px;
+	padding: 0 0 0 10px;
+	margin: 0;
+	text-transform: uppercase;
+	border: none;
+	background: url(../images/classic/icon_remove.png) no-repeat left center;
+	text-decoration: none!important;
+}
+.Content .RemoveFromWishlistForm input[type="submit"]{
+	height: 18px;
+	line-height: 18px;
+	padding-bottom: 2px;
+}
+.SharePublicWishList{
+	display: block;
+	margin: 10px 15px;
+	padding: 10px!important;
+	line-height: 20px;
+	background: #efefef!important;
+	border: none!important;
+}
+.SharePublicWishList input{
+	background: none!important;
+	border: none!important;
+}
+
+#EditAccountForm .FormContainer,
+.AddBillingAddress,
+.ExpressCheckoutBlock .ExpressCheckoutContent,
+#CheckGiftCertificateBalance .BlockContent,
+#GiftCertificateIntro .BlockContent{
+	padding: 15px!important;
+}
+#CheckoutStepConfirmation .ExpressCheckoutContent{
+	padding: 15px 0!important;
+}
+#CheckoutStepAccountDetails .ExpressCheckoutContent{
+	padding-bottom: 10px;
+}
+.ExpressCheckoutContent .CreateAccount,
+.ExpressCheckoutContent .AccountLogin{
+	display: none;
+	padding: 15px 15px 0 15px!important;
+}
+#CheckoutStepConfirmation .PL20{
+	padding: 0 15px!important;
+}
+.PL20 a.Button,
+.PL20 input[type=submit],
+.PL20 input[type=button],
+#CheckGiftCertificateBalance input[type=submit],
+#bottom_payment_button{
+	margin-left: 0!important;
+}
+#ChooseShippingAddress p .Button,
+#ChooseShippingAddress ul input[type="submit"] ,
+#ChooseBillingAddress ul input[type="submit"] ,
+#ChooseBillingAddress p .Button {
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+.ExpressCheckoutContent .CartContents td,
+.ExpressCheckoutContent .CartContents tfoot .SubTotal td {
+	border-top: none;
+	border-bottom: none;
+}
+.ExpressCheckoutContent .CartContents tfoot .CheckoutTotalRowSubtotal td {
+	border-top: 1px solid #dedede;
+}
+.ExpressCheckoutContent .CartContents td small{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+#CheckoutStepConfirmation p,
+#CheckoutStepConfirmation h3,
+#SearchTips .BlockContent,
+#SimilarProductsByCustomerViews,
+#SimilarProductsByTag,
+#ProductOtherDetails,
+#ProductWarranty,
+#ProductVideos,
+#ProductVendorsOtherProducts{
+	padding: 10px 15px;
+}
+
+.AccountMenu .BlockContent,
+#GiftCertificatesMenu .BlockContent,
+#SideSubPageList .BlockContent{
+	padding: 10px 0;
+	background: #fafafa;
+	text-transform: uppercase;
+}
+.AccountMenu li a,
+#GiftCertificatesMenu li a,
+#SideSubPageList li a{
+	display: block;
+	padding: 4px 15px;
+	color: #333333;
+	font: normal 11px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+#SideAccountMenu li,
+#GiftCertificatesMenu li,
+#SideSubPageList li {
+	background: none;
+}
+
+#PageContent .BlockContent{
+	display: block;
+	clear: both;
+	padding: 5px 15px 25px 15px;
+}
+#PageContent .BlockContent h3{
+	padding-top: 20px;
+}
+#PageContent p{
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+#PageContent p.banner{
+	text-align: center;
+	padding: 0;
+}
+#PageContent img{
+	max-width: 100%;
+}
+.cart-amnt,
+#CartContent h3,
+.ExpressCheckout h5{
+	padding: 15px;
+	border-bottom: 1px solid #efefef;
+	font: normal 14px/20px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.ExpressCheckout h5{
+	border-bottom: none;
+	padding-bottom: 10px;
+}
+.cart-amnt span,
+#CartContent h3 span,
+.ExpressCheckout h5 span{
+	float: left;
+}
+.cart-amnt em,
+#CartContent h3 em,
+.ExpressCheckout h5 em{
+	float: right;
+	font-weight: bold;
+	font-style: normal;
+}
+.WrappingOptions{
+	clear: both;
+}
+#SideCouponCodeBox,
+#SideGiftCertificateCodeBox,
+.CheckoutRedeemCoupon{
+	position: relative;
+	display: block;
+	padding: 0 15px 10px 15px;
+	max-width: 290px;
+	margin: 0 15px!important;
+	background: none!important;
+	border: none!important;
+	width: auto!important;
+}
+#SideCouponCodeBox{
+	margin: 15px!important;
+}
+#OrderConfirmationForm #SideCouponCodeBox,
+.CheckoutRedeemCoupon{
+	margin: 0!important;
+}
+#SideCouponCodeBox h2,
+#SideGiftCertificateCodeBox h2,
+#SideCouponCodeBox p,
+#SideGiftCertificateCodeBox p,
+#SideCouponCodeBox hr,
+#SideGiftCertificateCodeBox hr,
+.CheckoutRedeemCoupon h4,
+.CheckoutRedeemCoupon .hide,
+#CheckoutStepConfirmation .ExpressCheckoutContent .CartContents thead{
+	display: none;
+}
+.Textbox, input[type="text"], textarea,
+input.field-xlarge,
+select.field-xlarge {
+	border: 1px solid #efefef;
+	line-height: 18px;
+	padding: 10px 12px;
+}
+textarea{
+	padding-right: 0;
+}
+div.categoryPicker {
+	width: 276px!important;
+	border: 1px solid #efefef!important;
+}
+#SideCouponCodeBox .Textbox,
+#SideGiftCertificateCodeBox .Textbox,
+.CheckoutRedeemCoupon #couponcode{
+	width: 238px!important;
+	display: block;
+	color: #333333;
+	padding-right: 38px;
+}
+#SideCouponCodeBox .GoButton,
+#SideGiftCertificateCodeBox .GoButton,
+.Content .CheckoutRedeemCoupon .GoButton{
+	position: absolute;
+	right: 15px;
+	top: -1px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	float: left;
+	width: 40px;
+	height: 35px;
+	text-align: center;
+	color: #999999!important;
+	border: none;
+	background: none;
+	font: normal 12px/35px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.SideRelatedProducts{
+	display: block;
+	clear: both;
+}
+#SimilarMultiProductsByCustomerViews .BlockContent,
+.SideRelatedProducts .BlockContent,
+.Content #BrandContent .ProductList{
+	display: block;
+	clear: both;
+	padding: 0 15px;
+	margin-bottom: 10px;
+}
+
+.CreateAccount,
+.AccountLogin,
+#CreateAccountForm,
+#CreateAccountForm h3 {
+	border: none!important;
+}
+.CreateAccount,
+.AccountLogin{
+	padding: 20px 15px!important;
+}
+.AccountLogin p.Submit{
+	margin-top: 0;
+	line-height: 20px;
+}
+.CreateAccount legend,
+.AccountLogin legend{
+	padding: 15px 0 0 0!important;
+	text-transform: uppercase;
+}
+
+#ChooseShippingAddress{
+	margin-bottom: 10px;
+}
+.BlockContent #recaptcha_area, .BlockContent #recaptcha_table {
+	width: 290px !important;
+	overflow: hidden;
+}
+
+#CartHeader, 
+.ProductAddToCart .productAttributeLabel,
+.PrimaryProductDetails .PriceDetailRow  .Label,
+.AccountLogin dt{
+	display: none!important;
+}
+.CheckoutButton a.Button{
+	text-indent: 20px;
+	background: #333333 url(../images/classic/icon_cart_white.png) no-repeat 65px center;
+}
+
+.SubCategoryList,
+.SubBrandList,
+.SubCategoryList ul,
+.SubBrandList ul{
+	margin: 0;
+	padding: 0;
+	background: none!important;
+}
+
+.SitemapCategories ul,
+.SitemapCategories ul ul,
+.SitemapCategories li{
+	margin: 0;
+	padding: 0;
+}
+
+#Footer ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#Footer a {
+	color: #c1c1c1;
+}
+#Footer p{
+	color: #c1c1c1;
+}
+#socnet {
+	display: block;
+	padding: 12px 15px;
+	background: #fafafa;
+	border-top: none;
+	border-bottom: 1px solid #efefef;
+}
+#socnet h2{
+	float: left;
+	line-height: 25px;
+	margin: 0;
+	padding: 0;
+	color: #c1c1c1;
+}
+#socnet .icon-social-theme {
+	background: url(../images/classic/icon_social.png) no-repeat 0 0;
+}
+#socnet a{
+	display: inline;
+	float: left;
+	width: 26px;
+	height: 25px;
+	margin: 0 0 0 16px;
+	text-indent: 30px;
+	overflow: hidden;
+}
+#socnet .icon-facebook{
+	background-position: 0 0;
+}
+#socnet .icon-facebook:hover{
+	background-position: 0 -25px;
+}
+#socnet .icon-twitter{
+	background-position: -43px 0;
+}
+#socnet .icon-twitter:hover{
+	background-position: -43px -25px;
+}
+#socnet .icon-linkedin{
+	background-position: -85px 0;
+}
+#socnet .icon-linkedin:hover{
+	background-position: -85px -25px;
+}
+#socnet .icon-youtube{
+	background-position: -128px 0;
+}
+#socnet .icon-youtube:hover{
+	background-position: -128px -25px;
+}
+#socnet .icon-rss{
+	background-position: -170px 0;
+}
+#socnet .icon-rss:hover{
+	background-position: -170px -25px;
+}
+.FooterLinks,
+.FooterLinks li{
+	display: block;
+	clear: both;
+	text-align: left;
+}
+.FooterLinks li a{
+	display: block;
+	padding: 5px 15px;
+	line-height: 19px;
+	border-bottom: 1px solid #efefef;
+}
+#FullSiteLink{
+	padding-top: 25px;
+	line-height: 18px;
+}
+#FullSiteLink a{
+	text-transform: uppercase;
+	font: bold 10px 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.btop a{
+	text-align: center;
+	font-weight: bold;
+}
+	

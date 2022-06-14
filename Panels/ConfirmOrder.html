@@ -1,0 +1,154 @@
+<div class="Block Moveable Panel" id="ConfirmOrder">
+	<form method="post" action="%%GLOBAL_ShopPath%%/checkout.php" onsubmit="return confirm_payment_provider()">
+		<input type="hidden" name="action" value="pay_for_order" />
+
+		<h2>
+			%%LNG_ConfirmYourOrderShort%%
+		</h2>
+		<div class="BlockContent">
+			<p class="ErrorMessage" style="display: %%GLOBAL_HideCheckoutError%%">
+				%%GLOBAL_CheckoutErrorMsg%%
+			</p>
+
+			<p class="SuccessMessage" style="display: %%GLOBAL_HideCheckoutSuccess%%">
+				%%GLOBAL_CheckoutSuccessMsg%%
+			</p>
+
+			<div style="display: %%GLOBAL_HideConfirmOrderPage%%">
+				<div class="BillingDetails">
+					<h5 class="Subtitle">%%LNG_BillingAddress%%</h5>
+					<div class="BoxContent">
+					%%GLOBAL_BillingAddress%%
+					</div>
+				</div>
+				<div class="ShippingDetails" style="%%GLOBAL_HideShippingDetails%%">
+					<h5 class="Subtitle">%%LNG_ShippingAddress%%</h5>
+					<div class="BoxContent">
+					%%GLOBAL_ShippingAddress%%
+					</div>
+				</div>
+
+				<div class="OrderContents">
+					
+					<h5 class="Subtitle" style="padding: 0 15px">%%LNG_YourOrderContainsTheFollowingItems%%</h5>
+
+					<table class="CartContents Stylize General" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th style="white-space: nowrap;">%%LNG_CartItems%%</th>
+								<th style="white-space: nowrap; text-align: right;">%%LNG_ItemPrice%%</th>
+							</tr>
+						</thead>
+						<tfoot>
+							%%GLOBAL_totals%%
+						</tfoot>
+						<tbody>
+							%%SNIPPET_CartItems%%
+						</tbody>
+					</table>
+					
+                    
+					
+					<div class="box2">
+						<div style="display: %%GLOBAL_HidePaymentOptions%%" class="PaymentOptions" id="payment_options">
+							<h5 class="Subtitle">%%LNG_HowWouldYouLikeToPay%%</h5>
+							<div style="display: %%GLOBAL_HideUseStoreCredit%%;">
+								<p class="MB10">
+									<label><input type="radio" name="store_credit" id="store_credit" value="1" checked='checked'  onclick="update_order_credit_payment(true)" /><i class="fa fa-circle"></i> %%LNG_CheckoutUseStoreCredit%%</label>
+								</p>
+								<div id="use_store_credit" class="PL30" style="display: %%GLOBAL_HideUseStoreCredit%%">
+									<p style="display: %%GLOBAL_HideLimitedCreditWarning%%" class="ErrorMessage">%%GLOBAL_CheckoutStoreCreditWarning%%</p>
+									<div class="MB10">
+										<table cellpadding="3">
+											<tr>
+												<td align="left"><strong>%%LNG_StoreCreditBalance%%</strong></td>
+												<td align="right" width="100" >%%GLOBAL_StoreCredit%%</td>
+											</tr>
+											<tr style="display: %%GLOBAL_HideLimitedCreditWarning%%">
+												<td align="left"><strong>%%LNG_OutstandingOrderTotal%%</strong></td>
+												<td align="right" width="100" class="ProductPrice">%%GLOBAL_Remaining%%</td>
+											</tr>
+											<tr style="display: %%GLOBAL_HideRemainingStoreCredit%%">
+												<td align="left"><strong>%%LNG_RemainingStoreCredit%%</strong></td>
+												<td align="right" width="100" style="color: green;">%%GLOBAL_RemainingCredit%%</td>
+											</tr>
+										</table>
+									</div>
+	
+									<div class="MB10" style="display: %%GLOBAL_HideLimitedCreditPaymentOption%%">
+										<p>%%LNG_CreditPaymentMethod%%</p>
+										<div class="PL30" id="credit_provider_list" style="display: %%GLOBAL_HideLimitedCreditWarning%%">
+											%%GLOBAL_StoreCreditPaymentProviders%%
+											%%GLOBAL_CheckoutWith%%
+										</div>
+									</div>
+								</div>
+								<div class="MB10" style="display: %%GLOBAL_HideCreditAltOptionList%%">
+									<label><i class="fa fa-circle"></i><input type="radio" name="store_credit" value="0"  onclick="update_order_credit_payment(false); checkout_provider_changed(this);" /> %%GLOBAL_CreditAlt%%</label>
+								</div>
+							</div>
+						</div>
+						
+						<div id="provider_list" style="display:%%GLOBAL_HidePaymentProviderList%%">
+							%%GLOBAL_PaymentProviders%%
+						</div>
+					</div>
+					<div class="FloatRight CheckoutRedeemCoupon" style="display: %%GLOBAL_HideUseCoupon%%">
+						
+						<p>%%GLOBAL_RedeemIntro%%</p>
+						<p>
+							<input type="text" name="couponcode" id="couponcode" value="" class="Textbox Field200" placeholder="Code" autocorrect="off" autocapitalize="off" />
+							<input type="submit" name="apply_code" id="apply_code" value="%%LNG_Apply%%" onclick="Cart.CheckCouponCode();" class="GoButton" />
+						</p>
+					</div>	
+					<div class="box2">	
+						<div style="display: %%GLOBAL_HideOrderComments%%" class="CheckoutOrderComments">
+							
+							<h5 class="Subtitle">%%LNG_EnterOrderComments%%</h5>
+							<div>
+								<textarea name="ordercomments" cols="40" rows="6" class="Field400">%%GLOBAL_OrderComments%%</textarea>
+							</div>
+						</div>
+		
+						<div style="%%GLOBAL_HideOrderTermsAndConditions%%" class="CheckoutHideOrderTermsAndConditions">
+							
+							<h5 class="Subtitle">%%LNG_TermsAndConditions%%</h5>
+							<div style="%%GLOBAL_HideTermsAndConditionsTextarea%%">
+								<textarea readonly="readonly" cols="60" rows="6" class="Field400">%%GLOBAL_OrderTermsAndConditions%%</textarea>
+							</div>
+		
+							<div class="chk-agree">
+								<label for= "AgreeTermsAndConditions"><input type="checkbox" name="AgreeTermsAndConditions" id="AgreeTermsAndConditions" />
+								<span class="Required">*</span> %%GLOBAL_AgreeTermsAndConditions%%</label> %%GLOBAL_TermsAndConditionsLink%%
+							</div>
+						</div>
+		
+						<div style="display: %%GLOBAL_HideMailingListInvite%%">
+							
+							<h5 class="Subtitle">%%LNG_HearFromUsViaEmail%%</h5>
+		
+							<p style="display: %%GLOBAL_HideMailingListInvite%%" class="MailingListOptions">
+								 <label for="join_mailing_list">
+								 <input type="checkbox" class="CheckboxTogglesOtherElements" name="join_mailing_list" id="join_mailing_list" %%GLOBAL_NewsletterBoxIsTicked%% /><i class="fa fa-ok"></i> %%LNG_WouldLikeToReceiveNewsletter%%</label><br />
+		
+								<span style="display:%%GLOBAL_HideOrderCheckBox%%"><label for="join_order_list"><input type="checkbox" class="CheckboxTogglesOtherElements" name="join_order_list" id="join_order_list" %%GLOBAL_OrderBoxIsTicked%% />%%LNG_NewsletterSpecialOffersText%%</label><br /></span>
+							</p>
+						</div>
+		
+						<p>
+							<input id="bottom_payment_button" class="Button DarkBtn" style="display:%%GLOBAL_HideButtomPaymentButton%%" type="submit" value="%%LNG_ProceedToPayment%%" />
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</form>
+	%%Panel.ChooseCheckoutProviderJavaScript%%
+	<script type="text/javascript">
+		%%GLOBAL_PaymentButtonSwitch%%
+		lang.TickArgeeTermsAndConditions = '%%LNG_TickArgeeTermsAndConditions%%';
+		lang.EnterCouponCode = "%%LNG_EnterCouponCode%%";
+	</script>
+</div>
+

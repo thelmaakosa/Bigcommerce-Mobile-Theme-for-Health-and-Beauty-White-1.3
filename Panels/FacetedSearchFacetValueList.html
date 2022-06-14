@@ -1,0 +1,24 @@
+<div class="facet-container facet-container-view-all">
+    <h1 class="facet-quickfind-heading">{{ title }}</h1>
+    <form class="facet-quickfind-form">
+        <fieldset>
+            <input type="text" class="facet-value-list-quickfind" placeholder="Find...">
+        </fieldset>
+    </form>
+
+    <div class="facet-body">
+        <ul class="facet-options-list facet-options-columns">
+            {{#options}}
+            <li class="facet-option js-facet-option {{#if attributes.selected }} selected {{/if}}" >
+                <a class="facet-option-link" data-facet-id="{{ attributes.id }}">
+                    {{ attributes.title }}
+                    <span class="facet-option-product-count">
+                        ({{ attributes.count }})
+                    </span>
+                </a>
+            </li>
+            {{/options}}
+        </ul>
+    </div>
+</div>
+

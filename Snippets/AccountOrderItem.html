@@ -1,0 +1,27 @@
+<li>
+	<div class="ActionBox">
+	<form action="%%GLOBAL_ShopPath%%/account.php" method="get">
+		<input type="hidden" name="action" value="view_order">
+		<input type="hidden" name="order_id" value="%%GLOBAL_OrderId%%">
+
+		
+		<a href="javascript: void(0)" onclick="$(this).closest('form').submit(); return false;" style="display:%%GLOBAL_DisableViewButton%%">%%LNG_ViewOrder%%</a>
+		&nbsp;/&nbsp;
+		<a href="account.php?action=new_return&amp;order_id=%%GLOBAL_OrderId%%" class="ReturnLink" style="display: %%GLOBAL_DisableReturnButton%%;">%%LNG_ReturnOrderItems%%</a>
+		
+		
+		
+	</form>
+	
+	</div>
+	<h5 class="Subtitle">%%LNG_Order%% #%%GLOBAL_OrderId%%</h5>
+	<div class="BoxContent">
+		<p class="Meta">
+			%%LNG_OrderDate%%: %%GLOBAL_OrderDate%%<br />
+		</p>
+		<strong>%%LNG_YourOrderContainsTheFollowingItems2%%</strong>
+		<ul class="OrderItemList">
+			%%GLOBAL_AccountOrderItemList%%
+		</ul>
+	</div>
+</li>

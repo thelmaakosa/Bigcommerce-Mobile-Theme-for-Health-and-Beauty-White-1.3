@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body ontouchstart="">
+	<div id="Container">
+		%%Panel.Header%%
+
+		<div id="Wrapper">
+			%%Panel.WrapperBanner%%
+			<div class="Content Wide" id="LayoutColumn1">
+				<div class="Block">
+					<h2>%%LNG_ThanksForYourOrder%%</h2>
+					<h2>
+						<span>%%LNG_YourOrderNumber%%</span>
+						<a href="%%GLOBAL_ShopPath%%/account.php?action=view_order&order_id=%%GLOBAL_OrderId%%">
+							%%GLOBAL_OrderId%%
+						</a>
+					</h2>
+
+					<div class="BlockContent">
+						<p class="ErrorMessage" style="display:%%GLOBAL_HideError%%">
+							%%GLOBAL_ErrorMessage%%
+						</p>
+
+						<div style="display:%%GLOBAL_HidePaidOrderConfirmation%%">
+							<div style="display:%%GLOBAL_HidePhysicalOrderConfirmation%%" class="box2">
+								%%GLOBAL_PhysicalOrderConfirmation%%
+							</div>
+							<p style="display: %%GLOBAL_HidePhysicalViewOrderLink%%">
+								<a href="%%GLOBAL_ShopPath%%/orderstatus.php" class="Button">%%LNG_ViewYourOrder%%</a>
+							</p>
+							<div style="display:%%GLOBAL_HideDigitalOrderConfirmation%%" class="box2">
+								%%GLOBAL_DigitalOrderConfirmation%%
+							</div>
+						</div>
+
+						<div style="display: %%GLOBAL_HideAwaitingPayment%%">
+							<p class="SuccessMessage" style="display:%%GLOBAL_HideSuccess%%">
+								%%LNG_JustSentAnEmailConfirmation%%
+							</p>
+							<div class="box2">%%LNG_OrderAwaitingPayment%%</div>
+						</div>
+						<div class="box2">
+							%%GLOBAL_OrderConfirmationDetails%%
+							%%SNIPPET_OfflinePaymentMessage%%
+						</div>
+						
+					</div>
+				</div>
+				%%Panel.SideTopSellers%%
+			</div>
+		</div>
+		%%Panel.Footer%%
+		<!-- Include the conversion tracking code for all analytics packages -->
+		%%GLOBAL_ConversionCode%%
+	</div>
+	
+	</div>
+</body>
+</html>

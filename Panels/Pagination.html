@@ -1,0 +1,23 @@
+<div class="js-pagination {{ paginationClass }}">
+    {{#paginate pagination type="previous"}}
+        {{^if disabled}}<div class="FloatLeft PrevNext Prev">
+                        <a href="#" class="nav-prev js-paginate" data-page="{{n}}">&laquo;</a>
+                        </div>
+        {{/if}}
+    {{/paginate}}
+    <ul class="js-paging-list {{ pagingListClass }} FloatLeft">
+        {{#paginate pagination type="middle" limit="7"}}
+        {{#if active}}
+        <li class="ActivePage">{{n}}</li>
+        {{else}}
+        <li><a href="#" class="js-paginate" data-page="{{n}}">{{n}}</a></li>
+        {{/if}}
+        {{/paginate}}
+    </ul>
+    {{#paginate pagination type="next"}}
+        {{^if disabled}}<div class="FloatLeft PrevNext Next">
+                        <a href="#" class="nav-next js-paginate" data-page="{{n}}">&raquo;</a>
+                        </div>
+        {{/if}}
+    {{/paginate}}
+</div>

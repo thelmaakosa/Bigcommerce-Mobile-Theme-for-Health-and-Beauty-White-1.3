@@ -1,0 +1,17 @@
+<a class="mobile-thumb-link" href="%%GLOBAL_ZoomImageURL%%" onclick="$('#MobileGallery a:first').click(); return false;">
+  <img src="%%GLOBAL_ThumbImageURL%%" alt="%%GLOBAL_ImageDescription%%" title="%%GLOBAL_ImageDescription%%" />
+</a>
+
+<ul id="MobileGallery" class="MobileGallery" style="display:none;">%%GLOBAL_ProductImagesList%%</ul>
+
+<script type="text/javascript">
+  (function(window, $, PhotoSwipe){
+    $(function() {
+      $('#MobileGallery a').photoSwipe({
+        captionAndToolbarFlipPosition: true
+      });
+    });
+  })(window, window.jQuery, window.Code.PhotoSwipe);
+</script>
+
+<a href="#" onclick="$('#MobileGallery a:first').click(); return false;" class="SeeMorePicturesLink">%%LNG_MorePhotos%%</a>

@@ -1,0 +1,50 @@
+%%SNIPPET_ProductExpectedReleaseDate%%
+
+
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_CdnAppPath%%/javascript/jquery/themes/cupertino/ui.all.css?%%GLOBAL_JSCacheToken%%" />
+<link rel="stylesheet" type="text/css" media="screen" href="%%GLOBAL_MASTER_THEME_PATH%%/Styles/product.attributes.css?%%GLOBAL_JSCacheToken%%" />
+<link rel="stylesheet" type="text/css" media="screen" href="%%GLOBAL_TPL_PATH%%/Styles/product.attributes.css?%%GLOBAL_JSCacheToken%%" />
+<script type="text/javascript" src="%%GLOBAL_jQueryUIPath%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.form.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.attributes.js?%%GLOBAL_JSCacheToken%%"></script>
+
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+	<input type="hidden" name="action" value="add" />
+	<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+	<input type="hidden" name="variation_id" class="CartVariationId" value="" />
+	<input type="hidden" name="currency_id" value="" />
+	<div class="ProductDetailsGrid ProductAddToCart %%GLOBAL_ConfigurableProductClass%%">
+		%%SNIPPET_ProductFieldsList%%
+		<div class="ProductOptionList">
+			%%SNIPPET_VariationList%%
+		</div>
+		<div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">%%GLOBAL_ProductAttributeList%%</div>
+		%%SNIPPET_EventDate%%
+		<div class="OutOfStockMessage">
+		%%SNIPPET_SideAddItemSoldOut%%
+		</div>
+		<div class="DetailRow" style="display: %%GLOBAL_DisplayAdd%%">
+			<div class="Value AddCartButton">
+				<div style="display:%%GLOBAL_HideWishlist%%" id="SideProductAddToWishList">
+					<a href="javascript: void(0)" class="Button wishBtn"><i class="fa fa-heart"></i>&nbsp; %%LNG_AddToWishList%%</a>
+				</div>
+				<div id="SideProductAddToCart">
+					<button type="submit" class="Button"><i class="fa fa-shopping-cart"></i> ADD TO CART</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+%%Panel.SideProductAddToWishList%%
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script language="javascript" type="text/javascript">//<![CDATA[
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+%%GLOBAL_ProductMinMaxQtyJavascript%%
+//]]></script>
+%%GLOBAL_EventDateJavascript%%

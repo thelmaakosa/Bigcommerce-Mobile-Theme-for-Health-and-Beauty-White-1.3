@@ -1,0 +1,92 @@
+<head>
+	<title>%%Page.WindowTitle%%</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=%%GLOBAL_CharacterSet%%" />
+	<meta name="description" content="%%Page.MetaDescription%%" />
+	<meta name="keywords" content="%%Page.MetaKeywords%%" />
+	%%Page.CanonicalLink%%
+	%%Page.NextLink%%
+	%%Page.PrevLink%%
+	%%Page.Robots%%
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<!-- Set viewport to iPhone portrait mode -->
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<link rel="shortcut icon" href="%%GLOBAL_Favicon%%" />
+	
+	<!-- Stylesheets -->
+	%%GLOBAL_Stylesheets%%
+
+	<link href="%%GLOBAL_TPL_PATH%%/Styles/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="%%GLOBAL_TPL_PATH%%/Styles/uniform.default.css" type="text/css" rel="stylesheet" />
+	<link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css' />
+<!-- end stylesheets -->
+	
+	<!-- begin: js page tag -->
+	<script language="javascript" type="text/javascript">//<![CDATA[
+		(function(){
+			// this happens before external dependencies (and dom ready) to reduce page flicker
+			var node, i;
+			for (i = window.document.childNodes.length; i--;) {
+				node = window.document.childNodes[i];
+				if (node.nodeName == 'HTML') {
+					node.className += ' javascript';
+				}
+			}
+		})();
+	//]]></script>
+	<!-- end: js page tag -->
+
+	<!-- Tell the browsers about our RSS feeds -->
+	%%GLOBAL_HeadRSSLinks%%
+
+	<!-- Include visitor tracking code (if any) -->
+	%%GLOBAL_TrackingCode%%
+	<script type="text/javascript" src="%%GLOBAL_jQueryPath%%"></script>
+	<script defer type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/jquery.easing.min.js"></script>
+    <script defer type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/jquery.uniform.min.js"></script>
+	<script async type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/script.js"></script>
+
+	<script async type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/menudrop.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/common.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script async type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/iselector.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script defer type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/jquery.autobox.js"></script>
+	<script async type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/quicksearch.js"></script>
+    <script async src="%%GLOBAL_CdnAppPath%%/javascript/viewport.js?%%GLOBAL_JSCacheToken%%"></script>
+
+	<!-- HIDE IPHONE MENU BAR WHEN PAGE LOADS -->
+	<script type="application/x-javascript">
+		$(document).ready(function() {
+			$('#SearchForm #search_query').bind('keydown', function() {
+				$('#SearchForm label').hide();
+			})
+			.bind('blur', function() {
+				if(!$(this).val()) {
+					$('#SearchForm label').show();
+				}
+			});
+                 });
+                   addEventListener('load', function() {
+                setTimeout(hideAddressBar, 0);
+		}, false);
+		function hideAddressBar() {
+			//window.scrollTo(0, 1);
+		}
+	</script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	config.ShopPath = '%%GLOBAL_ShopPath%%';
+	config.AppPath = ''; // BIG-8939: Deprecated, do not use.
+	if (typeof isc == 'undefined') {
+		isc = {};
+	}
+	isc.TPL_PATH = '%%GLOBAL_TPL_PATH%%';
+	var ThumbImageWidth = %%GLOBAL_ProductThumbImageWidth%%;
+	var ThumbImageHeight = %%GLOBAL_ProductThumbImageHeight%%;
+	//]]>
+	</script>
+	%%GLOBAL_AdditionalScriptTags%%
+	%%GLOBAL_RTLStyles%%
+</head>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body ontouchstart="" class="product-page">
+	<link href="%%GLOBAL_TPL_PATH%%/js/photoswipe-3.0.5/photoswipe.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/photoswipe-3.0.5/lib/klass.min.js"></script>
+	<script type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/photoswipe-3.0.5/code.photoswipe.jquery-3.0.5.min.js"></script>
+	<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/validate/jquery.validate.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.functions.js?%%GLOBAL_JSCacheToken%%"></script>
+	<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.js?%%GLOBAL_JSCacheToken%%"></script>
+
+
+	<div id="Container">
+	%%Panel.Header%%
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Content Wide" id="LayoutColumn1">
+			%%Panel.ProductDetails%%
+			<div class="prodPage">
+				<!-- Panel.ProductTabs -->
+				%%Panel.ProductDescription%%
+				%%Panel.ProductVideos%%
+				%%Panel.ProductWarranty%%
+				%%Panel.ProductOtherDetails%%
+				%%Panel.SimilarProductsByTag%%
+				%%Panel.ProductByCategory%%
+				%%Panel.ProductVendorsOtherProducts%%
+				%%Panel.ProductReviews%%
+				%%Panel.SimilarProductsByCustomerViews%%
+			</div>
+			%%Panel.SideProductRelated%%
+		</div>
+		<div class="Right" id="LayoutColumn2">
+		</div>
+		<div class="clear"></div>
+	</div>
+	%%Panel.Footer%%
+</div>
+<script type="text/javascript">
+
+$(window).load(function() {
+  		 var hash = window.location.hash;
+		 var searchUrl = window.location.search;
+  if (hash == '#write_review') {
+	   $('.WriteReviewBtn').hide();
+}
+  if (hash == '#write_review' || searchUrl == '?tab=ProductReviews' || hash == '#reviews') {
+	 
+	$('#ProductReviews > h3').trigger('click');  
+	var idCurr = $('.Block.current').attr('id');
+	  
+		//$('#ProductReviews > h2').trigger('click'); 
+		  $('html, body').animate({
+			scrollTop: ($("#write_review").offset().top -  $('.Block.current').height()) - 100
+		  }, 0); 
+  }
+  
+});
+
+</script>
+</body>
+</html>

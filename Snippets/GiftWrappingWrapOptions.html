@@ -1,0 +1,39 @@
+<script>
+modalExtra = '';
+maxModalHt = '';
+$(document).ready(function() {	
+	$('select, input[type="checkbox"], input[type="radio"]').uniform();
+	 modalExtra = $('#ModalTitle').outerHeight(true) + $('#ModalButtonRow').outerHeight(true) + 60; 
+	 maxModalHt =  $(window).height() - modalExtra;
+	 $('#ModalContent').css('max-height', maxModalHt);
+});
+$('#giftwrapping_all, #ModalContentContainer input').change(function() {	
+	
+	 modalExtra = $('#ModalTitle').outerHeight(true) + $('#ModalButtonRow').outerHeight(true) + 60;
+	 maxModalHt =  $(window).height() - modalExtra;
+	 $('#ModalContent').css('max-height', maxModalHt);
+});
+$(window).bind( 'orientationchange', function(e){
+    modalExtra = $('#ModalTitle').outerHeight(true) + $('#ModalButtonRow').outerHeight(true) + 60;
+	 maxModalHt =  $(window).height() - modalExtra;
+	 $('#ModalContent').css('max-height', maxModalHt);
+});
+</script>
+<div style="margin-top: 15px; margin-bottom: 15px">
+    <div style="margin-left: 0px; margin-bottom: 15px; %%GLOBAL_HideWrappingTitle%%"><strong>%%LNG_Item%%: 1 x %%GLOBAL_ProductName%%</strong></div>
+        <div class="VerticalFormContainer  WrappingOption">
+            <dl>
+                <dd>
+                    <select class="Field300" name="giftwrapping[%%GLOBAL_GiftWrappingId%%]" id="giftwrapping_%%GLOBAL_GiftWrappingId%%" onchange="Cart.ToggleGiftWrappingType(this.options[this.selectedIndex])">
+                            <option value="">Select Gift Wrapping</option>
+                            %%GLOBAL_WrappingOptions%%
+                    </select>
+                    %%GLOBAL_GiftWrapPreviewLinks%%
+                </dd>
+                <dt class="WrapComments" style="%%GLOBAL_HideGiftWrapMessage%%">%%LNG_GiftMessage%%:</dt>
+                <dd class="WrapComments" style="%%GLOBAL_HideGiftWrapMessage%%">
+                    <textarea class="Field300" rows="5" name="giftmessage[%%GLOBAL_GiftWrappingId%%]" id="giftmessage_%%GLOBAL_GiftWrappingId%%">%%GLOBAL_GiftWrapMessage%%</textarea>
+                </dd>
+            </dl>
+        </div>
+</div>

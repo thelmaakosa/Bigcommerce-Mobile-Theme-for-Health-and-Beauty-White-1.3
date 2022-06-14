@@ -1,0 +1,14 @@
+			<div class="Block" id="SearchForm" style="%%GLOBAL_HideSearchBox%%">
+				<div class="BlockContent">
+					<form action="%%GLOBAL_ShopPath%%/search.php" method="get" onsubmit="return check_small_search_form()">
+						<div>
+							<input type="text" name="search_query" id="search_query" class="Textbox autobox" value="%%GLOBAL_OriginalSearchQuery%%" title="Search"  autocorrect="off" autocapitalize="off" placeholder="%%LNG_Search%%"/>
+							<label for="search_query" style="%%GLOBAL_HideIfSearchQuery%%">%%LNG_Search%% %%GLOBAL_StoreName%%</label>
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script type="text/javascript">
+				lang.EmptySmallSearch = "%%LNG_EmptySmallSearch%%";
+			</script>

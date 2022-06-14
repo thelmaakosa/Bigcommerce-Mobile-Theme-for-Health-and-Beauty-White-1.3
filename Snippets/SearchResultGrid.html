@@ -1,0 +1,42 @@
+<div class="SearchSorting SortBox" style="display: %%GLOBAL_HideSectionSorting%%">
+	<div style="visibility:hidden;" id="SearchSortingSelectContainer">
+		
+		<select id="SearchSorting%%GLOBAL_SectionType%%" name="SearchSorting%%GLOBAL_SectionType%%" class="SearchSortingList">
+			<option selected="selected">%%LNG_SortBy%%:</option>
+			%%GLOBAL_SectionSortingOptions%%
+		</select>
+		
+	</div>
+	<script language="javascript" type="text/javascript">//<![CDATA[
+	// reveal the sorting options when is js available -- visiblity is used instead of display so the page flow doesn't change when loading
+	$('#SearchSortingSelectContainer').css('visibility', 'visible');
+	//]]></script>
+</div>
+
+<div class="CategoryPagination Clear" style="display: %%GLOBAL_HideSectionPaging%%">
+	<div class="FloatLeft PrevNext Prev">%%GLOBAL_SectionPagingPrevious%%</div>
+	
+	<ul class="PagingList FloatLeft">
+		%%GLOBAL_SectionPaging%%
+	</ul>
+	<div class="FloatLeft PrevNext Next">%%GLOBAL_SectionPagingNext%%</div>
+	
+	<div class="clear"></div>
+</div>
+
+<ul class="%%GLOBAL_SectionType%% Clear" >
+	%%GLOBAL_SectionResults%%
+</ul>
+
+<div class="clear"></div>
+
+<div class="CategoryPagination Clear" style="display: %%GLOBAL_HideSectionPaging%%">
+	<div class="FloatLeft PrevNext Prev">%%GLOBAL_SectionPagingPrevious%%</div>
+	
+	<ul class="PagingList FloatLeft">
+		%%GLOBAL_SectionPaging%%
+	</ul>
+	<div class="FloatLeft PrevNext Next">%%GLOBAL_SectionPagingNext%%</div>
+	
+	<div class="clear"></div>
+</div>

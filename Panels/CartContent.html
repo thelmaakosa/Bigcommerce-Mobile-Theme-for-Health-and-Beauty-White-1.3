@@ -1,0 +1,92 @@
+<script type="text/javascript">
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.Calculating = "%%LNG_Calculating%%"
+lang.CalculateShipping = "%%LNG_CalculateShipping%%"
+lang.ChooseShippingMethod = "%%LNG_ChooseShippingMethod%%"
+lang.CartRemoveConfirm = '%%LNG_CartRemoveConfirm%%';
+lang.ConfirmRemoveGiftWrapping = '%%LNG_ConfirmRemoveGiftWrapping%%';
+lang.SelectCountry = '%%LNG_ChooseShippingCountry%%';
+lang.SelectState = '%%LNG_ChooseShippingState%%';
+lang.EnterZip = '%%LNG_EnterShippingZip%%';
+$(document).ready(function() {
+	$('#UpdateQuantitiesLink').click(function() {
+		if(!Cart.ValidateQuantityForm($('#cartForm').get(0))) {
+			return false;
+		}
+		$('#cartForm').submit()
+	});
+});
+</script>
+<script src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/imodal/imodal.js?%%GLOBAL_JSCacheToken%%" type="text/javascript"></script>
+
+<div class="Block Moveable Panel" id="CartContent">
+	<div class="BlockContent">
+		<div style="display: %%GLOBAL_HideShoppingCartGrid%%">
+			<h3 class="cart-amnt cEmpty"><span>0 item</span><em>$0.00</em><div class="clear"></div></h3>
+			<form enctype="multipart/form-data" onsubmit="return Cart.ValidateQuantityForm(this);" action="cart.php" name="cartForm" id="cartForm" method="post">
+			<input type="hidden" name="action" value="update" />
+
+			<ul class="CartList">
+				%%SNIPPET_CartItems%%
+			</ul>
+
+			<div class="CartSummary">
+
+				<div class="SubTotal">
+					<span>%%LNG_Subtotal%%:</span> <em class="ProductPrice">%%GLOBAL_CartItemTotal%%</em>
+					<div class="clear"></div>
+				</div>
+
+				<div style="%%GLOBAL_HideGiftWrappingTotal%%">
+					<span>%%LNG_GiftWrapping%%:</span> <em class="ProductPrice">%%GLOBAL_GiftWrappingTotal%%</em>
+					<div class="clear"></div>
+				</div>
+
+				<div style="display:%%GLOBAL_HideShoppingCartShippingCost%%" class="SubTotal">
+					<span>%%LNG_Shipping%% (%%GLOBAL_ShippingProvider%%):</span> <em class="ProductPrice">%%GLOBAL_ShippingCost%%</em>
+					<div class="clear"></div>
+				</div>
+
+				<div style="display: %%GLOBAL_HideShoppingCartHandlingCost%%" class="SubTotal">
+					<span>%%LNG_Handling%%:</span> <em class="ProductPrice">%%GLOBAL_HandlingCost%%</em>
+					<div class="clear"></div>
+				</div>
+
+				%%SNIPPET_Coupons%%
+
+				<div class="SubTotal" style="%%GLOBAL_HideDiscountAmount%%">
+					%%LNG_Discount%%:</span> <em class="ProductPrice">%%GLOBAL_DiscountAmount%%</em>
+					<div class="clear"></div>
+				</div>
+
+				%%GLOBAL_Taxes%%
+
+				%%SNIPPET_GiftCertificates%%
+
+				<div class="SubTotal GrandTotal">
+					%%LNG_GrandTotal%%: <em class="ProductPrice">%%GLOBAL_CartTotal%%</em>
+					<div class="clear"></div>
+				</div>
+			</div>
+			</form>
+			<div class="ProceedToCheckout">
+				<div class="CheckoutButton" style="%%GLOBAL_HideCheckoutButton%%">
+					<a href="%%GLOBAL_CheckoutLink%%" title="%%LNG_CheckoutButtonTitle%%" class="Button">
+						<i class="fa fa-shopping-cart"></i> PROCEED TO CHECKOUT
+					</a>
+				</div>
+				%%GLOBAL_AdditionalCheckoutButtons%%
+			</div>
+			<div class="Clear">
+				%%Panel.SideCouponCodeBox%%
+				%%Panel.SideGiftCertificateCodeBox%%
+			</div>
+		</div>
+
+		<div style="display: %%GLOBAL_HideShoppingCartEmptyMessage%%">
+			<h3 class="cEmpty"><span>0 item</span><em>$0.00</em><div class="clear"></div></h3>
+			<div class="box2">%%LNG_NoItemsInCart%%</div>
+			<p><a href="%%GLOBAL_ShopPath%%/" class="Button LightBtn" style="margin-top: 0">%%LNG_ContinueShopping%%</a></p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="Block Moveable Panel AddToWishlist AddWishlistPop" id="SideProductAddToWishList" style="display:%%GLOBAL_HideWishlist%%">
+	
+	
+	<div class="BlockContent">
+		<h2>%%LNG_AddToWishList%%</h2> 
+		<form name="frmWishList" id="frmWishList" action="%%GLOBAL_ShopPath%%/wishlist.php" method="get">
+			<input type="hidden" name="action" value="add" />
+			<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+			<input type="hidden" name="variation_id" value="" class="WishListVariationId"/>
+			<p class="intro">%%LNG_AddToCart1%% %%GLOBAL_ProductName%% %%LNG_ToYourWishList%%</p>
+			<p>%%GLOBAL_WishLists%%</p>
+			
+			
+			<button class="Button" type="submit"><i class="fa fa-heart"></i> %%LNG_AddToWishList%%</button>
+		</form>
+	</div>
+</div>

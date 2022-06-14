@@ -1,0 +1,34 @@
+%%GLOBAL_ItemShippingRow%%
+<tr>
+	<td class="%%GLOBAL_ItemClass%%">
+		<label class="FloatLeft"><i class="fa fa-ok"></i>
+			<input type= "checkbox" name="reorderitem[%%GLOBAL_OrderProductId%%]" style = "margin-right: 5px;" class="%%GLOBAL_DisableReorder%%"  onclick="ShowItemMessage(this, %%GLOBAL_OrderProductId%%);" /></label>
+		<div style="padding-left:30px; padding-top: 4px">
+			%%GLOBAL_StrikeStart%%%%GLOBAL_Qty%% x
+			<a href="%%GLOBAL_Link%%" target="%%GLOBAL_Target%%">%%GLOBAL_Name%%</a>
+			<div>
+			%%GLOBAL_ProductOptions%%
+			</div>
+			<div style="font-style:italic;">%%GLOBAL_EventDate%%</div>
+		</div>
+		
+		
+
+		
+		<div style="padding-left:30px; clear: both">
+		
+			
+			%%GLOBAL_StrikeEnd%% %%GLOBAL_Refunded%%%%GLOBAL_DownloadsLink%%
+			<div style="%%GLOBAL_HideWrappingOptions%%" class="WrappingOptions">
+				%%LNG_GiftWrapping%%: %%GLOBAL_GiftWrappingName%%
+			</div>
+			<div id="ItemMessage_%%GLOBAL_OrderProductId%%" class="OrderItemMessage" style="%%GLOBAL_HideItemMessage%%">
+				%%GLOBAL_ReorderMessage%%
+			</div>
+	
+			<div class="ExpectedReleaseDate" style="%%GLOBAL_HideExpectedReleaseDate%%">%%GLOBAL_ExpectedReleaseDate%%</div>
+			
+		</div>	
+	</td>
+	<td class="%%GLOBAL_ItemClass%%" align="right">%%GLOBAL_Price%%</td>
+</tr>

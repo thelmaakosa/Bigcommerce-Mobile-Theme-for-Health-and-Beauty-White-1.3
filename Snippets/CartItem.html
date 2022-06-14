@@ -1,0 +1,29 @@
+
+	<li>
+		<div class="ProductImage">
+			%%GLOBAL_ProductImage%%
+		</div>
+		<div class="ProductDetails">
+			<strong><a href="%%GLOBAL_ProductLink%%">%%GLOBAL_ProductName%%</a></strong>%%GLOBAL_ProductOptions%%
+			%%GLOBAL_EventDate%%
+			<div style="%%GLOBAL_HideWrappingOptions%%" class="WrappingOptions">
+				<i class="fa fa-angle-right"></i> %%LNG_GiftWrapping%%:
+				%%GLOBAL_GiftWrappingName%%
+				<a href="#" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%'); return false;" style="%%GLOBAL_HideGiftWrappingAdd%%">%%LNG_Add%%</a>
+				<span style="%%GLOBAL_HideGiftWrappingEdit%%">
+					<a href="#" onclick="Cart.ManageGiftWrapping('%%GLOBAL_CartItemId%%'); return false;">%%LNG_Change%%</a> %%LNG_Or%% <a href="cart.php?action=remove_giftwrapping&amp;item_id=%%GLOBAL_CartItemId%%" onclick="return Cart.RemoveGiftWrapping(); return false;">%%LNG_Remove%%</a>
+				</span>
+				<br />
+				<span style="%%GLOBAL_HideGiftMessagePreview%%">
+					<i class="fa fa-angle-right"></i> %%LNG_GiftMessage%%:
+					%%GLOBAL_GiftMessagePreview%%
+				</span>
+			</div>
+			<div class="CartItemPrice">
+				<em class="ProductPrice">%%GLOBAL_ProductPrice%%</em>
+			</div>
+			<div class="CartQuantity">
+				Quantity:<br /> %%GLOBAL_CartItemQty%% <a href="cart.php?action=remove&amp;item=%%GLOBAL_CartItemId%%" onclick="Cart.RemoveItem('%%GLOBAL_CartItemId%%'); return false;" class="CartRemoveLink"><i class="fa fa-times-circle"></i> x %%LNG_Remove%%</a>
+			</div>
+		</div>
+	</li>
